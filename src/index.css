@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url(./fonts/KumbhSans-VariableFont_YOPQ\,wght.ttf);
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Kumbh Sans", system-ui;
+  color: #000000;
+  background: #ffffff;
+
+}
+
+a{
+  color: #000000;
+  font-size: 1.2rem;
+}
+
+.btn{
+  padding: 0.7rem 2.5rem;
+  font-weight: 500;
+  background: #FF0080;
+  border: none;
+  font-size: 18px;
+  color: #ffffff;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: transparent;
+  border: 1px solid #FF0080;
+  color: #000000;
+}
+
+
+.special{
+  color: #FF0080;
+}
+
+.heading{
+  text-align: center;
+  color: #FF0080;
+  font-weight: 600;
+}

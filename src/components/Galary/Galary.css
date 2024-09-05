@@ -1,0 +1,21 @@
+.galary{
+    margin-top: 4rem;
+    padding: 1% 3%;
+}
+.galary h2{
+    margin-bottom: 2rem;
+}
+
+
+.galary-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 10px; /* Space between images */
+}
+
+.galary-container img{
+    width: 100%; /* Make images take up the full width of their container */
+    height: 200px; /* Set a fixed height to ensure uniformity */
+    object-fit: cover; /* Makes sure the image fills the container without distortion */
+    border-radius: 8px; /* Optional: for rounded corners */
+}
