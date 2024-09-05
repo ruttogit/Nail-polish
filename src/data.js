@@ -5,7 +5,7 @@ import Worker4 from './images/Worker4.jpg';
 
 export const ourTeam = [
   {
-    name: 'John W Walker',
+    name: 'Anne J.',
     image: Worker1, 
   },
   {
