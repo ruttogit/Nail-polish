@@ -47,13 +47,17 @@
   }
 
   .about-left{
-    margin-top: 1rem;
+    margin-top: 0rem;
   }
 
 
   .about-right{
     gap: 1rem;
     place-items: center;
+  }
+
+  .about-main h3{
+    margin-top: 2rem;
   }
 
 }

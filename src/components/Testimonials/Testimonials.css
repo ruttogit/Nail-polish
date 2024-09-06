@@ -71,6 +71,13 @@
     .arrow{
         width: 30px;
     }
+    .testimonial-card{
+        padding: 2rem 1rem;
+    }
+
+    .testimonial-cont{
+        gap: 1rem;
+    }
 }
 
 
