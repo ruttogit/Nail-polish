@@ -1,28 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 import arrowLeft from "../../icons/arrow-circle-left.svg"
 import arrowRight from "../../icons/arrow-circle-right.svg"
-import Profile from "../../images/testim.jpg"
-import starfull from "../../icons/star.svg"
-import starHalf from "../../icons/star-half-alt.svg"
+// import Profile from "../../images/testim1.jpg"
 import "./Testimonials.css"
 
+
+import { Testimonial } from '../../data'
+
+
 function Testimonials() {
+  const [index, setIndex] = useState(0);
+  const {name, image, message, ratings} = Testimonial[index];
+
+
+  const prevTestimonialHandler = () => {
+
+    if (index <= 0){
+      setIndex(Testimonial.length - 1)
+    }else{
+      setIndex(prev => prev - 1)
+    }
+  }
+
+  const nextTestimonialHandler = () => {
+    if (index >= Testimonial.length -1){
+      setIndex(0)
+    }
+    setIndex(prev => prev + 1)
+  }
+
+
   return (
     <div className='testimonial-cont'>
-        <img className='arrow' src={arrowLeft} alt="" />
+        <img className='arrow' src={arrowLeft} alt="" onClick={prevTestimonialHandler}/>
         <div className="testimonial-card">
-            <img className='test-prof' src={Profile} alt="" />
-            <h4 className='special'>Ann J.</h4>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque </p>
+            <img className='test-prof' src={image} alt="" />
+            <h4 className='special'>{name}</h4>
+            <p>{message}</p>
             <div className="rating">
-                <img src={starfull} alt="" />
-                <img src={starfull} alt="" />
-                <img src={starfull} alt="" />
-                <img src={starfull} alt="" />
-                <img src={starHalf} alt="" />
+              {ratings.map((item) =>{
+                return <img src={item} alt="" />
+              })}
             </div>
         </div>
-        <img className='arrow' src={arrowRight} alt="" />
+        <img className='arrow' src={arrowRight} alt="" onClick={nextTestimonialHandler} />
     </div>
   )
 }

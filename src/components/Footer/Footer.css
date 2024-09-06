@@ -45,6 +45,11 @@
 
 .footer-left img:hover{
     transform: scale(1.2);
+    cursor: pointer;
+}
+
+.footer-right button:hover{
+    color: #ffffff;
 }
 
 .footer-btn{

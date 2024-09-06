@@ -46,6 +46,10 @@
     grid-template-columns: 1fr;
   }
 
+  .about-left{
+    margin-top: 1rem;
+  }
+
 
   .about-right{
     gap: 1rem;
@@ -56,6 +60,10 @@
 
 
 @media screen and (max-width: 600px){
+
+  .about h2{
+    margin-top: 6rem;
+  }
 
     .about-left{
     text-align: center;
